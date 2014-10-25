@@ -1,0 +1,1427 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Something About Python</title>
+
+		<meta name="description" content="Python">
+		<meta name="author" content="G_will">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+	    .reveal .slides{
+	    	font-size: 60px;
+	    }
+	    </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                <section data-markdown>
+                    <script type="text/template">
+                        # Python
+                        
+                        ### 最适合统计学的计算机语言
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        # 关于我
+                        
+                        <br />
+                        
+                        **郭鹏**
+                        
+                        **G_will**
+                        
+                        **guopeng@xdmrc.org**
+
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Outline
+                        
+                        ### Python
+                        
+                        - What
+                        - Why
+                        - How
+                        - 实例
+                        
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ## What
+                        
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Python 
+                        
+                        是一种通用计算机编程语言
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 通用 
+
+                        相对于 R
+                        
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 要完成一件事情时
+                        
+                        <br />
+                        
+                        ### 细枝末节的问题占多数
+
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 历史
+                        
+                        Guido van Rossum
+                        
+                        1989年12月
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Python 
+                        
+                        ### 是一种面向对象的
+                        
+                        ### 解释型计算机语言
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 面向对象？
+                        
+                        ### 解释型？
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 这些都不重要
+                        
+                    </script>
+                </section>
+                               
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 不要沉溺于纠缠不清的概念中
+                        
+                    </script>
+                </section>
+                               
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Duck Typing
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 当看到一只鸟走起来像鸭子、
+                        
+                        ### 游泳起来像鸭子、
+                        
+                        ### 叫起来也像鸭子，
+                        
+                        ### 那么这只鸟就可以被称为鸭子。
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 简单直观的认识哲学
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 往往我们会沉溺于
+                        
+                        ### 理解细枝末节的概念而迷失了方向
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        #### 细枝末节的问题占多数
+                        
+                    </script>
+                </section>
+                               
+                <section data-markdown>
+                    <script type="text/template">
+                        ### The Feynman Technique
+                        
+                        ### 费曼技巧
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 如果你可以用自己的话
+                        
+                        ### 将一件事情解释清楚
+                        
+                        ### 那么证明你理解了这件事情。
+                        
+                    </script>
+                </section>
+                
+
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Why
+                        
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 简单
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 简单
+                        
+                        ### 非常非常重要
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 世界是复杂的
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 解决问题
+                        
+                        ### 就是在与复杂性缠斗
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 但往往
+                        
+                        ### 我们为了解决复杂问题
+                        
+                        ### 却制造出了更复杂的问题
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 代码是写给人看的
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 只是计算机恰巧可以执行
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 误区
+                    
+                        ### 简单的东西不够强大
+                                       
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 也许简单的东西本身
+                        
+                        ### 只能完成简单的工作
+                        
+                        ### 但是当我们把很多简单的东西
+                        
+                        ### 耦合到一起时
+                        
+                        ### 质的变化产生了
+                        
+                    </script>
+                </section>
+                
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 俗套的说服
+                    
+                        以前我也听过有同学动辄就说我要去学C++云云，事实上，Python在简单与功能强大直接做的很好，作为Google的第三大语言，你不能说Python本身功能不够强大。
+                        
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 我们都在尝试寻找完美的东西
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 事实上几乎不存在完美的东西
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 徒劳
+                        
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 权衡与取舍
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 其实我们只是需要
+                        
+                        ## 最不坏的解决方案
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 经验与实践
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 知识外溢
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Free
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 自由 & 免费
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 使用非常宽松的开源协议
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 使用起来没有顾虑
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ###  简单
+                        
+                        ### 资源多
+                        
+                        ### 耦合性低
+                        
+                    </script>
+                </section>     
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 为什么适合统计学
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 适用领域广泛
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 既可以随手拿起完成一些小工作
+                        
+                        ### 也可以支持大型项目的开发。    
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 资源丰富
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Pypi
+                        
+                        ### Python包 
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        #### 包整体的质量与数量都较 CRAN 高
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 对于统计学有用的资源
+                        
+                        - NumPy
+                        - SciPy
+                        - scikit
+                        - Matplotlib
+                        - Pandas
+                        - 还有很多，以后介绍
+
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 风格比较统一
+
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        ## How
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 安装
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Windows
+                        
+                        Python(x,y)
+                        
+                        稍后演示
+                        
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Linux/Mac OS X
+                        
+                        <br />
+                        
+                        ### 自带
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 我们说过
+                        
+                        要严肃的工作应该使用Linux系统，
+                        但是因为Python以及Python(x,y)的存在，
+                        这个问题不那么严重了。
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 对比
+                        
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 举个例子：浮点数问题
+                        
+                        R  
+                        
+                        <pre><code contenteditable>> 0.3 == 0.1 + 0.2
+[1] FALSE
+                        </code></pre>
+                        
+                        Python
+                        <pre><code contenteditable>>>> 0.3 == 0.1 + 0.2
+False
+                        </code></pre>
+                        
+                    </script>
+                </section>
+            
+                <section data-markdown>
+                    <script type="text/template">
+                        But
+                    
+                        在 R 中，人们会告诉你不应该这么做。
+                        
+                        我觉得这样不好，R本身就是给统计学人使用的，统计学人为什么要理解所谓的计算机精度问题呢？
+                        
+                        在 Python 中，你可以这样。
+                        <pre><code contenteditable>>>> from decimal import Decimal
+>>> Decimal('0.3') == Decimal('0.1') + Decimal('0.2')
+True
+                        </code></pre>
+                        
+                        当然，这么做是有成本的。但是我想说明的是，工具应该是帮助我们的。
+                        
+                    </script>
+                </section>
+                
+                
+                <section>
+                    <img src="img/python_data.jpg" />
+                </section>
+
+				
+                    <section data-markdown>
+                        <script type="text/template">
+                            # 半小时
+# Python
+# 入门
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Python程序
+                            ## 的运行方式
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            - 交互命令行
+                            
+- 执行脚本
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 交互命令行
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            - 即时获取结果
+                            
+- 实验代码段
+
+- 计算器
+
+- 小工具
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 交互式命令行
+                        
+<pre><code contenteditable>>>> 1 + 1
+2
+>>>print 'Hello'
+Hello
+</code></pre>
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 执行脚本
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            - 更好组织代码
+                            
+- 更适合工作环境
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            我们约定使用“py”
+                            
+                            作为python脚本的后缀名
+                            
+<br />
+
+hello.py
+
+<pre><code contenteditable>print 'Hello'</code></pre>
+
+执行
+
+<pre><code contenteditable>$ python hello.py
+Hello
+</code></pre>
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ###基本上
+                            
+                            ###执行脚本就相当于
+                            
+                            ###将脚本中的代码
+                            
+                            ###一行行的输入到交互命令行中执行
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 变量与表达式
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### 程序就是数据和算法
+                            
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            - 数据 -> 变量
+                            
+                            - 算法 -> 表达式
+                            
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### 变量类型
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### 为啥要有变量类型
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### 抽象、模式
+
+### 统一解决问题，降低复杂度
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 折中方案
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### 所以，数据类型的确定因素很多
+                           
+
+### 难理解
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### 但是不重要
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### 你需要知道的是大概分为两种
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            - 数字
+                            
+- 字符串
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 数字
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+数字
+<pre><code contenteditable># 这是整数
+a = 1 
+# 这是浮点数
+b = 3.33
+</code></pre>
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 字符串
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+字符串
+<pre><code contenteditable># 这是字符串
+s = '字符串'
+# 这是字符串
+a = '1'
+# 这不是字符串
+a = 1
+</code></pre>
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                         ### 使用 &apos; 或 &quot; 包裹
+                        </script>
+                    </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 单引号、双引号与三引号的区别
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 复杂数据类型
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 列表
+                        
+                        - 字典
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 列表
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 有序集合
+                    </script>
+                </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+字符串
+<pre><code contenteditable># 这是列表
+a = [1,2,3]
+# 这也是一个列表
+b = ['a', 'b', 'c']
+# 与C语言一样，序列从0开始计数
+</code></pre>
+                        </script>
+                    </section>
+                    
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 字典
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 键值与键名对应的集合
+                    </script>
+                </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+字符串
+<pre><code contenteditable># 这是字典
+d = {'a':1, 'b':2}
+</code></pre>
+                        </script>
+                    </section>
+                    
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 复杂数据类型很多
+                        ### 有什么用？
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 抽象概念、模式的组合
+                        
+                        ### 解决更加特定的问题
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 时间序列 -> 列表
+                        
+                        - 某科成绩单 -> 字典
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 语法块与缩进
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 语法块
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 具有相同层次的语句
+                    </script>
+                </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+相同层次
+<pre><code contenteditable>a = 1
+b = 1
+c = a + b
+</code></pre>
+
+相同层次
+<pre><code contenteditable>def foo(a, b):
+    #相同层次
+    c = a + b
+    return c
+</code></pre>
+
+
+相同层次
+<pre><code contenteditable>if x > 0:
+    #相同层次
+    a = 1
+    b = 1
+    c = a + b
+</code></pre>
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 同一层次的语法块有相同的缩进
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 缩进
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 缩进就是距离左边的空白
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 空白不单指空格
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 直观的概念
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 通常我们使用4个空格作为缩进空白
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 缩进是Python语法上最有特点的地方
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 规范，所有人写的都差不多
+                        
+                        - 简单
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 程序控制
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 条件
+                    </script>
+                </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+条件语句
+<pre><code contenteditable>if 条件:
+    代码块
+</code></pre>
+
+<pre><code contenteditable>if 条件:
+    代码块
+else:
+    代码块
+</code></pre>
+
+<pre><code contenteditable>if 条件一:
+    代码块
+elif 条件二:
+    代码块
+else:
+    代码块
+</code></pre>
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 循环
+                    </script>
+                </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+for循环语句
+<pre><code contenteditable>for 元素 in 列表:
+    代码块
+</code></pre>
+
+<pre><code contenteditable>for x in [1,2,3]:
+    print x
+</code></pre>
+
+while循环语句
+<pre><code contenteditable>while 条件:
+    代码块
+</code></pre>
+
+<pre><code contenteditable>while a < 3:
+    print a
+    a = a + 1
+</code></pre>
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 循环特殊控制语句
+                        
+                        - continue
+                        
+                        - break
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### continue
+                        
+结束这次循环，继续下一次循环
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### break
+                        
+结束所有循环
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 函数
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+定义函数
+<pre><code contenteditable>def 函数名(参数):
+    代码块
+</code></pre>
+
+使用函数
+<pre><code contenteditable>函数名(参数)
+</code></pre>
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 面向对象
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 程序设计思想
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 被广泛接受
+                        
+                        ### 以至于
+                        
+                        ### 一些语言在设计时、实现
+                        
+                        ### 就提供了相拟合的特性
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 一切都是对象
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 对象由属性和方法组成
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 属性 -> 对象的变量
+                        
+                        - 方法 -> 对象的函数
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 面向对象的三大特性
+                        
+                        - 封装
+                    
+                        - 继承
+                        
+                        - 多态
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 资源
+                    </script>
+                </section>
+                
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Python的简单表现之一就是
+                        
+                        ### 资源丰富
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 内置函数
+                        
+                        - 标准库
+                        
+                        - 第三方
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 内置函数
+                        
+                        - print
+                        
+                        - len
+                        
+                        - open
+                        
+                        - ...
+                    </script>
+                </section>    
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 标准库
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 几乎涵盖计算机基础各个领域
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 第三方
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 多的令人发指
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 所以解决问题先要招资源
+                        
+                        ### 如果找不到
+                        
+                        ### 多半是你的方向就错了
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 再看Pythonic
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+<pre><code contenteditable>>>>import this
+</code></pre>
+<pre>
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+</pre>
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Pythonic与语法糖
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+多值对应
+
+Other:
+<pre><code contenteditable>list = [1, 2, 3]
+a = list[0]
+b = list[1]
+c = list[2]
+</code></pre>
+
+Python:
+<pre><code contenteditable>list = [1, 2, 3]
+a, b, c = list
+</code></pre>
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+隐式拆解
+
+Other:
+<pre><code contenteditable>tmp = b
+b = a
+a = tmp
+</code></pre>
+
+Python:
+<pre><code contenteditable>a, b =  b, a
+</code></pre>
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+列表推到
+
+Other:
+<pre><code contenteditable>a = [7,2,4,3,5,8]
+b = []
+for(i=0, i++, i < len(a)){
+    j = 0;
+    if (a[i] > 3){
+        b[j] = a[i];
+        j = j + 1;
+    }
+}
+</code></pre>
+
+Python:
+<pre><code contenteditable>b = [x for x in a if x > 3]
+</code></pre>
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 编码风格
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 4个空格作为缩进单位
+                        
+                        - 源代码顶部utf-8声明
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 编码问题
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 回顾一下文本文件与二进制文件
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 和千年虫一样
+                        
+                        ### 是人类对于复杂度的无力
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 尽量全使用utf-8编码
+                        
+                        - win中很容易出问题
+                        
+                        - 遇到编码问题马上问
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 平均值的计算程序
+                    </script>
+                </section>
+ 
+                <section>
+                    <h1>THE END</h1>
+                    <h3>THANKS!</h3>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
