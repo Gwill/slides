@@ -1,0 +1,535 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Crawler</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="G_will">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+        <style type="text/css">
+	    .reveal .slides{
+            font-family: "League Gothic", "Microsoft Yahei", Impact, sans-serif;
+	    	font-size: 62px;
+	    }
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: "League Gothic", "Microsoft Yahei", Impact, sans-serif;
+        }
+	    </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 网页数据抓取
+                        
+                        ### 以及相关的问题
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 目标
+                        
+                        站在统计学、数据分析角度看待网页数据抓取
+                        
+                        厘清脉络，分清主次，不必再纠缠于各种无意义事情
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 注意
+                        
+                        非严谨学术阐述
+                        
+                        都是个人理解
+                        
+
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Outline
+                        
+                        - 什么是网页抓取，什么是爬虫？
+                        - 面临哪些问题？
+                        - 我们的关注点
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 网页抓取
+                        
+                        通过技术手段获取网页信息
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 网页
+                        
+                        通过网址唯一标记，由浏览器展示的信息集合
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 方式
+                        
+                        编写程序模拟用户使用浏览器访问网页
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 爬虫
+                        
+                        这种模拟程序我们称之为“爬虫”
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 爬虫类型
+                        
+                        - 通用爬虫
+                            - 逢网页就抓
+                            - 顺着链接走
+                            - Google、Baidu 通用搜索引擎使用
+                            
+                        - 专用爬虫
+                            - 按照一定规则抓取网页内信息
+                            - 我们用这个
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Web 技术
+                        
+                        - Web 通称网页浏览、浏览器相关技术范畴
+                        - Web 整体建立在 HTTP 协议基础之上
+                        - HTTP 构建于 TCP 协议之上
+                        - TCP 以下不必再了解
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTTP
+                        
+                        利用 TCP 可保持的连接机制，实现了无状态、不保持连接的
+                        
+                        请求 / 响应 模型
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTTP
+                        
+                        - 请求 / 响应 ，不保持连接
+                        - 无状态，每次 请求 / 响应 都独立
+                        - 文本化
+                        - 来个例子
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTTP
+                        
+                        The Worse The Better
+                        
+                        绝佳例证
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## KISS
+                        
+                        Keep It Simple & Stupid
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTTP 一些细节
+                        
+                        - 协议
+                            - http
+                            - https
+                        
+                        - uri
+                            - 目录树引申而来
+                            
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTTP 一些细节
+                        
+                        - headers
+                            - method
+                            - version
+                            - host
+                            - refer
+                            - user-agent
+                            - accept
+                            - cookies
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTTP 一些细节
+                        
+                        - body
+                            - 就是网页的内容了
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 网页
+                        
+                        HTML + CSS + JavaScript
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTML
+                        
+                        HTML → DOM
+                        
+                        DOM：Document Object Model，文档对象模型
+                
+                        树形结构
+                        
+                        - 范例
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## HTML
+                        
+                        <img src="img/htmltree.gif">
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## CSS
+                        
+                        CSS 描述网页样式
+                        
+                        供浏览器渲染使用
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        HTTP、CSS 都是只有描述
+                        
+                        没有逻辑
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Javascript
+                        
+                        - 逻辑在 Javascript
+                        - 一种计算机语言
+                        - 运行在浏览器内，操作 DOM
+                        - Javascript 与 Java
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 另外
+                        
+                        - 浏览器就是面向 HTTP 的
+                        - 但是 HTTP 并不都实现网页的
+                            - 利用 HTTP 传输数据
+                            - <a target="_blank" href="http://hq.sinajs.cn/rn=1415335165679&list=s_sh000001,s_sz399001">例子</a>
+                           
+                        - 无状态性与状态保持
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 模拟访问就是
+                        
+                        - 构造 HTTP 请求信息
+                        - 发送请求，取回响应
+                         
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 面临的问题
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 策略
+                        
+                        - 重要
+                        - 数据要干什么
+                        - 抓取目标
+                            - 规则
+                            - URL
+                        - 网页与接口
+                            - 大规模接口不靠谱
+                                
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 效率
+                        
+                        - 硬件
+                            - 自己的机器做不靠谱
+                            - 云资源
+                        - 实现模型
+                            - 分布式
+                            - 细节（示意图）
+                        - 存储
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        <img src="img/req1.png">
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        <img src="img/req2.png">
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 请求限制
+                        - 登录
+                            - cookie 操作
+                        - 验证码
+                            - 识别
+                            - 人工
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 来源限制
+                            - 云服务申请大量 ip
+                                - ip 段问题
+                            - http 代理
+                                - 公开信息
+                        - GFW
+                            - 墙外
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 内容提取
+                        
+                        - 明确的
+                            - DOM 处理
+                            - 正则
+                            - 字符串处理
+                            
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 非明确的
+                            - 正文识别
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 文本处理
+                        
+                        - 字符编码
+                            - 网络环境复杂
+                        - 分词
+                            - 各种方法
+                            - 词的其他属性
+                                - 词性
+                        - NLP
+                    </script>
+                </section>
+                
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 容错
+                        
+                        - 架构设计
+                            - 单个 worker 的处理
+                        - 机制
+                            - 重试
+                            - 超时
+                        - 非常多的细节
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 具体实现思路
+                        
+                        - 程序员视角
+                        - 网络库
+                        - 调度实现
+                        - DOM 、字符处理
+                        - 辅助功能
+                        
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ## 我们
+                        
+                        - 目标
+                        - 实现思路指导，非具体程序
+                        - 模块化思考
+                            - 与其他课题的共同性
+                            
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        - 明确需求，不要纠缠于开发实现
+                        - 反馈调整细节
+                        - 有工具就要用工具
+                        - 专业服务更靠谱
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                        ### 我们的关注点
+                    
+                        - 统计方法的结合
+                        - NLP，自然语言处理
+                        - 基于统计方法的 DOM 处理
+                        - 后续处理，ETL，清洗
+                        - 更具根据分析项目需要反推爬虫的需求
+                    </script>
+                </section>
+                
+                <section>
+                    <h1>THE END</h1>
+                    <h3>THANKS!</h3>
+                    
+                    <br/>
+                    <p>guopeng@xdmrc.org</p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
