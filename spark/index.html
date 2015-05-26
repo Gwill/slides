@@ -1,0 +1,1111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Spark</title>
+
+		<meta name="description" content="Spark 简介">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        <style type="text/css">
+        .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: 'Source Sans Pro', Helvetica, sans-serif;
+            text-transform: none;
+        }
+        
+        .reveal section img {
+            box-shadow: none;
+        }
+        </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+<section data-markdown>
+<script type="text/template">
+# Spark 简介
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+![](img/spark-logo.png)
+</script>
+</section>
+
+<section data-markdown style="text-align: left;">
+<script type="text/template">
+## Outline
+
+- 背景
+- 不能不提的 Sacla
+- Spark 
+- Spark Streaming
+- GraphX
+- SparkSQL 与 DataFrame
+- Others
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+# 大数据
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 什么是“大数据”？
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 什么是“大数据”？
+
+- 大数据时代
+    - 信息社会
+    - 移动手机
+    - 物联网
+    - ...
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 什么是“大数据”？
+
+- 大数据技术
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 大数据技术
+
+数据规模以及分析流程都超越了我们以往<br>存储、处理、分析、理解的范畴
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 大数据从哪来
+
+- 社交网络
+- 电子商务
+- 商业活动
+- 移动设备
+- 云计算
+- 可穿戴设备
+- 生物医药
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 量变到质变
+
+- 移动互联网的流量预计在 2016 年达到 10.8 EB 每月
+- 在 2010 年，接入互联网的设备有 65 亿部，到了 2020 年这个数字将会到达 230 亿部
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 技术背景
+
+- 五年以前云计算还是像大数据一样空洞的词汇，今天云计算已经在很多企业中实际应用
+- 开源软件社区的快速发展：在现在的互联网企业的软件栈组成中巨大多数都是开源软件
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 大数据
+
+- Volume 规模
+- Velocity 速度
+- Variety 丰富
+- Value 价值
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 对应不断变大的数据在技术层面应该怎么办？
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 扩容
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 技术层面
+
+- Scale Up
+    - 纵向，提高单个节点的处理能力
+    - 加 CPU、加 内存、换 SSD
+
+- Scale Out
+    - 横向，加处理节点
+    - 分布式架构
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Scale Up 纵向扩容
+
+- 成本高
+- 有天花板
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Scale Out 横向扩容
+
+- 分布式容错性问题
+- 需要更高的软件研发能力
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+Scale Up 要比 Scale Out 贵，边际成本递增
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+Scale Out 要比 Scale Up 难，分布式容错、软件架构问题
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 迎难而上
+
+市场选择了 Scale Out
+
+分布式
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 分布式的问题
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## CAP定理
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+- 一致性（Consistency)
+- 可用性（Availability）
+- 分区容错性（Partition tolerance）
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 一致性
+
+所有节点在同一时间返回相同的数据
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 可用性
+
+保证对每个客户端请求无论成功与否都有响应
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 分区容错性
+
+系统中任意信息的丢失或失败不会影响系统的继续运行
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+根据定理，分布式系统只能满足三项中的两项<br>而不可能满足全部三项
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 一般分布式架构
+
+- Shared Nothing
+- Shared Disk
+- Shared Memory
+
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+![](img/parallel-arch.png)
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+现在绝大多数分布式架构都是 Shared Nothing
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+# Hadoop
+
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Google 提出了
+
+- MapReduce 计算框架
+- GFS 分布式存储
+- BigTable 分布式数据库
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### Hadoop 根据 GFS 与 MapReduce<br>做了开源实现
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Hadoop 生态
+
+![](img/hadoop-ecosystem.jpg)
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+### 当前的大数据处理工具
+
+![](img/bigdata-tools.png)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### 大数据分析软件架构
+
+![](img/bigdata-stack.png)
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 不能不提的 Scala
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+
+![](img/scala.png)
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Scala
+
+- Scala: scalable language
+- 面向对象与函数式的结合
+- 在 JVM 上实现
+- 由 Martin Odersky 设计
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Scala
+
+像 C++ 一样难的语言 
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 函数式语言
+
+- 比较严格的定义：
+
+没有可变值，不能赋值，没有命令式流程控制结构的语言
+
+- 比较宽泛的定义：
+
+在编程过程中着重于函数的实现
+
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 函数式语言
+
+函数是一等公民
+
+- 可以在任何地方定义
+- 可以当做参数传递也可以当做结果返回
+- 操作符可以直接操作函数
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## SBT
+
+- 面向 Scala、Java 的构建工具
+- 类似 Maven、Ant
+- 使用 Scala 开发
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## SBT
+
+- 方便的创建项目
+- 方便的编译、打包项目
+- 方便的依赖管理
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# Spark
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark 是什么
+
+一个高效的通用的分布式数据分析平台工具
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark 特点
+
+- 效率
+- 简单
+- 通用
+- 兼容
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark 
+
+与 Hadoop 中的 MapReduce 一个层级
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+## 效率
+
+- 基于内存的数据流
+- 使用 RDD 与 DAG 抽象的计算实现
+- 计算重演的代价小于 MapReduce
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 兼容
+
+Spark 与 Hadoop 的关联
+
+- Spark 可以部署在 YARN 上
+- Spark 支持 HDFS 
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+对比数据分析软件栈
+
+![](img/bigdata-stack.png)
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+Spark 给出的方案是
+
+![](img/bdas.png)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### 出发点
+
+- MapReduce 模式不适用于复杂的数据分析方法
+- 性能成为了瓶颈，磁盘 IO 消耗巨大
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### 解决方案
+
+- 使用更多的算子拓展 MapReduce 
+- 实现更高级的计算流
+- 将数据放到内存中提高效率
+
+![](img/hadoop-spark.png)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Hadoop VS Spark
+
+![](img/hadoop-flow.png)
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Hadoop VS Spark
+
+![](img/spark-flow.png)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## RDD
+
+Resilient Distributed Datasets
+
+Spark 中最核心的构件
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## RDD 是什么
+
+- 对于分布式存储数据的一种抽象
+- 可以在集群中传播的一组不可变对象
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+正是 RDD 抽象让 Spark 有了分布式的能力
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+Spark 的计算模式就是通过对<br>各种 RDD 的操作抽象构建而成的
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## RDD 操作
+
+- transformations 转换
+- actions 计算
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 转换 transformations 
+
+可以创造出新 RDD 的惰性操作，即不需要立即得到结果，在需要结果时再进行计算求值
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 计算 actions 
+
+发起计算并获得结果用来继续计算或者存储到硬盘
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+![](img/rdd-operation.png)
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+![](img/rdd-flow.png)
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+## 计算流程
+
+- Action 触发作业提交
+- RDD 之间的依赖分析形成 DAG
+- DAG 分为多个 Stage
+- 分发计算任务到各个节点
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+## Spark 节点
+
+- Driver
+- Master
+- Worker
+- Executor
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+![](img/spark-node.png)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark 部署模式
+
+- 单机模式 local
+- 伪集群模式 local-cluster
+- 原生集群模式 standalone cluster
+- 部署在 YARN 上 on YARN
+- 部署在 Mesos 上 on Mesos
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# Spark Streaming
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark Streaming
+
+- 流处理
+- 实时处理
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 流数据
+
+- 数据一直在变化
+- 数据持续产生
+- 数据无法回退
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 出发点
+
+- 很多应用实时产生大量数据需要处理
+- 需要处理流数据但是不需要进行保存
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 传统的处理方式
+
+- 在分析前保存、索引数据
+- 然后提出明确的分析思路分析数据
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark Streaming
+
+- 数据持久化
+- 离散化
+- 分片处理
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## DStream
+
+- DStream 是数据流的抽象
+- DStream 本质是持续的 RDD 序列
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark Streaming
+
+- 窗口操作
+- 容错机制
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## VS Storm
+
+- Storm 的延时更低
+- Streaming 吞吐更大
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# GraphX
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## GraphX
+
+Spark 中专门处理图数据的工具
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Graph 图
+
+使用点和边来抽象和描述的一种数据结构
+
+数学中的一个重要分支 —— 图论
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 图数据
+
+- 网页、链接数据
+- 社交网络数据
+- 交通网络数据
+- 通信网络数据
+- 神经结构
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## GraphX 特点
+
+- 基于 Spark 核心实现
+- 基于 Pregel 模式设计
+- 良好的可拓展性
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+## GraphX 实现
+
+- VertexRDD 点数据的抽象
+- EdgeRDD 边数据的抽象
+- EdgeTriplet 点和边集合数据的抽象
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 典型应用场景
+
+- 节点影响力计算
+- 图数据搜索
+- 社群关系挖掘
+- 推荐系统
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## SparkSQL 与 DataFrame
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+## 背景
+
+- 学习 Spark 成本偏高
+- 熟悉 SQL 人很多
+- 以 SQL 角度出发数据分析思路比较成熟
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## SparkSQL
+
+- 实现了 SQL 语句的解析
+- 使用 SQL 操作多种数据源（Parquet、JSON）
+- 实现了 SQL 对与 RDD 的操作
+- 支持 HQL
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## SchemaRDD
+
+- 带有范式信息的 RDD
+- 可以看做关系型数据库表的抽象
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## DataFrame
+
+- 数据集的抽象
+- 带有数据列的元信息
+- 与关系型数据表对应
+- 广泛存在于各种数据科学工具中
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Spark 中的 DataFrame
+
+- 对于 SchemaRDD 封装
+- 提供更多方便的操作
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+![](img/dataframe.png)
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 意义
+
+- 极大的简化了常规数据分析操作
+- 在信息架构层面打通了现有的各数据分析体系
+- R、Python 的数据分析师可以容易的开始 Spark
+- 因为附带 Schema 信息有助于后续步骤的优化
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# MLlib
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## MLlib
+
+顾名思义机器学习算法库
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## MLlib
+
+- 基础统计学功能
+- 分类与回归算法
+  - SVM、Logistic 回归、线性回归
+  - 朴素贝叶斯
+  - 决策树
+  - 随机森林、GBT
+
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## MLlib
+
+- 协同过滤，ALS
+
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## MLlib
+
+- 聚类
+  - k-means
+  - Gaussian Mixture
+  - PIC
+  - LDA
+- 降维
+  - SVD
+  - PCA
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 还有很重要的一点
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 官方支持的多语言支持
+
+- Scala
+- Java
+- Python，PySpark
+- 马上到来的 R ，SparkR
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 总结
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 数据分析工具简单的代际划分
+
+- 第一代数据分析工具
+
+  R Python SAS Matlab 等等，单机，已经比较成熟但是难以做大数据分析
+
+- 第二代数据分析工具
+
+  Hadoop 体系，分布式，但是只能处理特定的、比较简单的分析问题
+
+- 第三代数据分析工具
+
+  Spark、GraphLab、Storm，分布式、高效的，可以处理较复杂的数据分析问题
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 现在来看 Spark 是我们武器库中最好的武器
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+![](img/google-trends.png)
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+行业快速发展迭代
+
+未来会怎么样？
+
+</script>
+</section>
+
+
+<section style="text-align: left;" data-markdown>
+<script type="text/template">
+
+# Q & A
+
+</script>
+</section>
+
+<section style="text-align: left;" data-markdown>
+<script type="text/template">
+# THE END
+
+感谢大家的聆听
+
+</script>
+<pre><code>
+</code></pre>
+</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+
+				transition: 'slide', 
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
