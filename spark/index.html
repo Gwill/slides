@@ -495,7 +495,7 @@ Scale Out 要比 Scale Up 难，分布式容错、软件架构问题
 <script type="text/template">
 ## 效率
 
-- 基于内存的数据流
+- 基于内存的数据计算时存储
 - 使用 RDD 与 DAG 抽象的计算实现
 - 计算重演的代价小于 MapReduce
 </script>
@@ -509,6 +509,8 @@ Spark 与 Hadoop 的关联
 
 - Spark 可以部署在 YARN 上
 - Spark 支持 HDFS 
+- JVM 系的天然亲和
+- 官方提供的多语言绑定
 
 </script>
 </section>
@@ -908,7 +910,7 @@ Spark 中专门处理图数据的工具
 <script type="text/template">
 ## DataFrame
 
-- 数据集的抽象
+- 二维数据集的抽象
 - 带有数据列的元信息
 - 与关系型数据表对应
 - 广泛存在于各种数据科学工具中
@@ -939,7 +941,7 @@ Spark 中专门处理图数据的工具
 ## 意义
 
 - 极大的简化了常规数据分析操作
-- 在信息架构层面打通了现有的各数据分析体系
+- 在信息架构层面打通了现在主流数据分析工具
 - R、Python 的数据分析师可以容易的开始 Spark
 - 因为附带 Schema 信息有助于后续步骤的优化
 
