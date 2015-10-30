@@ -1,10 +1,9 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
 
-		<title>Crawler</title>
+		<title>网页数据抓取</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="G_will">
@@ -38,7 +37,7 @@
         <style type="text/css">
 	    .reveal .slides{
             font-family: "League Gothic", "Microsoft Yahei", Impact, sans-serif;
-	    	font-size: 62px;
+	    	font-size: 50px;
 	    }
         .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
             font-family: "League Gothic", "Microsoft Yahei", Impact, sans-serif;
@@ -55,51 +54,26 @@
                 <section data-markdown>
                     <script type="text/template">
                         ## 网页数据抓取
-                        
-                        ### 以及相关的问题
-
                     </script>
                 </section>
                 
-                <section data-markdown>
-                    <script type="text/template">
-                        ## 目标
-                        
-                        站在统计学、数据分析角度看待网页数据抓取
-                        
-                        厘清脉络，分清主次，不必再纠缠于各种无意义事情
-
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        ## 注意
-                        
-                        非严谨学术阐述
-                        
-                        都是个人理解
-                        
-
-                    </script>
-                </section>
-
                 <section data-markdown>
                     <script type="text/template">
                         ## Outline
                         
-                        - 什么是网页抓取，什么是爬虫？
+                        - 什么是网页数据抓取，什么是爬虫程序？
                         - 面临哪些问题？
-                        - 我们的关注点
+                        - 有什么工具
+                        
                     </script>
                 </section>
                 
                 
                 <section data-markdown>
                     <script type="text/template">
-                        ## 网页抓取
+                        ## Web 数据抓取
                         
-                        通过技术手段获取网页信息
+                        编写程序自动化的将互联网上的信息、数据收集保存
                     </script>
                 </section>
                 
@@ -121,24 +95,19 @@
                 
                 <section data-markdown>
                     <script type="text/template">
-                        ## 爬虫
+                        ## 爬虫程序
                         
-                        这种模拟程序我们称之为“爬虫”
+                        这种模拟程序我们称之为“爬虫程序”
                     </script>
                 </section>
                 
                 <section data-markdown>
                     <script type="text/template">
-                        ## 爬虫类型
+                        ## 爬虫程序应用领域
                         
-                        - 通用爬虫
-                            - 逢网页就抓
-                            - 顺着链接走
-                            - Google、Baidu 通用搜索引擎使用
-                            
-                        - 专用爬虫
-                            - 按照一定规则抓取网页内信息
-                            - 我们用这个
+                        - 搜索引擎
+                        - 获取数据
+                        
                     </script>
                 </section>
                 
@@ -147,10 +116,8 @@
                     <script type="text/template">
                         ## Web 技术
                         
-                        - Web 通称网页浏览、浏览器相关技术范畴
+                        - Web 通称网页浏览、浏览器相关技术
                         - Web 整体建立在 HTTP 协议基础之上
-                        - HTTP 构建于 TCP 协议之上
-                        - TCP 以下不必再了解
                     </script>
                 </section>
                 
@@ -158,7 +125,7 @@
                     <script type="text/template">
                         ## HTTP
                         
-                        利用 TCP 可保持的连接机制，实现了无状态、不保持连接的
+                        利用 TCP 可保持的连接机制，实现了无状态、不保持连接的通信方式
                         
                         请求 / 响应 模型
                     </script>
@@ -171,40 +138,19 @@
                         - 请求 / 响应 ，不保持连接
                         - 无状态，每次 请求 / 响应 都独立
                         - 文本化
-                        - 来个例子
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        ## HTTP
                         
-                        The Worse The Better
-                        
-                        绝佳例证
-                    </script>
-                </section>
-                
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        ## KISS
-                        
-                        Keep It Simple & Stupid
-
                     </script>
                 </section>
                 
                 <section data-markdown>
                     <script type="text/template">
                         ## HTTP 一些细节
-                        
-                        - 协议
-                            - http
-                            - https
-                        
-                        - uri
-                            - 目录树引申而来
+                       
+                        - 网址 URL
+                        - 方法 Method
+                        - 状态码 Status
+                        - 头信息 Headers
+                        - 主体信息 Body
                             
                     </script>
                 </section>
@@ -214,12 +160,9 @@
                         ## HTTP 一些细节
                         
                         - headers
-                            - method
-                            - version
                             - host
                             - refer
                             - user-agent
-                            - accept
                             - cookies
                         
                     </script>
@@ -227,16 +170,9 @@
                 
                 <section data-markdown>
                     <script type="text/template">
-                        ## HTTP 一些细节
-                        
-                        - body
-                            - 就是网页的内容了
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
                         ## 网页
+                        
+                        主体信息 Body
                         
                         HTML + CSS + JavaScript
                     </script>
@@ -246,13 +182,17 @@
                     <script type="text/template">
                         ## HTML
                         
+                        Hypertext Markup Language 
+                        
+                        超文本标记语言
+                        
                         HTML → DOM
                         
-                        DOM：Document Object Model，文档对象模型
+                        DOM：Document Object Model
+                        
+                        文档对象模型
                 
                         树形结构
-                        
-                        - 范例
 
                     </script>
                 </section>
@@ -289,10 +229,9 @@
                     <script type="text/template">
                         ## Javascript
                         
-                        - 逻辑在 Javascript
                         - 一种计算机语言
                         - 运行在浏览器内，操作 DOM
-                        - Javascript 与 Java
+                        - Javascript 与 Java 并没有什么关系
                     </script>
                 </section>
                 
@@ -329,29 +268,24 @@
                     <script type="text/template">
                         ## 策略
                         
-                        - 重要
-                        - 数据要干什么
                         - 抓取目标
-                            - 规则
-                            - URL
-                        - 网页与接口
-                            - 大规模接口不靠谱
-                                
+                        - 规则
+                        - URL
+ 
                     </script>
                 </section>
                 
+                <section data-markdown>
+                    <script type="text/template">
+                    网页抓取本身其实是一个“逆向”的过程
+                    </script>
+                </section>
                 
                 <section data-markdown>
                     <script type="text/template">
                         ## 效率
                         
-                        - 硬件
-                            - 自己的机器做不靠谱
-                            - 云资源
-                        - 实现模型
-                            - 分布式
-                            - 细节（示意图）
-                        - 存储
+                        效率一般不是问题
                     </script>
                 </section>
                 
@@ -373,21 +307,7 @@
                         - 登录
                             - cookie 操作
                         - 验证码
-                            - 识别
-                            - 人工
                         
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        - 来源限制
-                            - 云服务申请大量 ip
-                                - ip 段问题
-                            - http 代理
-                                - 公开信息
-                        - GFW
-                            - 墙外
                     </script>
                 </section>
                 
@@ -395,103 +315,118 @@
                     <script type="text/template">
                         ## 内容提取
                         
-                        - 明确的
-                            - DOM 处理
-                            - 正则
-                            - 字符串处理
-                            
-
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        - 非明确的
-                            - 正文识别
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        ## 文本处理
-                        
-                        - 字符编码
-                            - 网络环境复杂
-                        - 分词
-                            - 各种方法
-                            - 词的其他属性
-                                - 词性
-                        - NLP
-                    </script>
-                </section>
-                
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        ## 容错
-                        
-                        - 架构设计
-                            - 单个 worker 的处理
-                        - 机制
-                            - 重试
-                            - 超时
-                        - 非常多的细节
-
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        ## 具体实现思路
-                        
-                        - 程序员视角
-                        - 网络库
-                        - 调度实现
-                        - DOM 、字符处理
-                        - 辅助功能
-                        
-                    </script>
-                </section>
-                
-                <section data-markdown>
-                    <script type="text/template">
-                        ## 我们
-                        
-                        - 目标
-                        - 实现思路指导，非具体程序
-                        - 模块化思考
-                            - 与其他课题的共同性
+                        - DOM 树解析
+                        - 正则表达式
+                        - 字符串处理
                             
                     </script>
                 </section>
                 
                 <section data-markdown>
                     <script type="text/template">
-                        - 明确需求，不要纠缠于开发实现
-                        - 反馈调整细节
-                        - 有工具就要用工具
-                        - 专业服务更靠谱
+                    ## 工具
                     </script>
                 </section>
                 
                 <section data-markdown>
                     <script type="text/template">
-                        ### 我们的关注点
+                    ## Kimono
                     
-                        - 统计方法的结合
-                        - NLP，自然语言处理
-                        - 基于统计方法的 DOM 处理
-                        - 后续处理，ETL，清洗
-                        - 更具根据分析项目需要反推爬虫的需求
+                    https://www.kimonolabs.com/
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Scrapy
+                    
+                    http://scrapy.org/
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## pyspider
+                    
+                    https://github.com/binux/pyspider
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Grab
+                    
+                    http://grablib.org/
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Phantomjs
+                    
+                    http://phantomjs.org/
+
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## requests
+                    
+                    http://docs.python-requests.org/en/latest/
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## gevent
+                    
+                    http://www.gevent.org/
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## BeautifulSoup
+                    
+                    http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## lxml
+                    
+                    http://lxml.de/
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## python-goose
+                    
+                    https://github.com/grangier/python-goose
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## 正则表达式
+                    </script>
+                </section>
+                
+                <section data-markdown>
+                    <script type="text/template">
+                    ## python 内置字符串操作
+
                     </script>
                 </section>
                 
                 <section>
-                    <h1>THE END</h1>
                     <h3>THANKS!</h3>
-                    
-                    <br/>
-                    <p>guopeng@xdmrc.org</p>
                 </section>
 
 			</div>
@@ -511,7 +446,8 @@
 				history: true,
 				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				//theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                theme: 'simple',
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
