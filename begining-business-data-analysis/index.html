@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>@todo: need 标题</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -20,12 +20,71 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+        
+        <style type="text/css">
+        .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: 'Source Sans Pro', 'Microsoft Yahei', Helvetica, sans-serif;
+            text-transform: none;
+        }
+        
+        .reveal section img {
+            box-shadow: none;
+        }
+        </style>
+        
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+                
+
+<section data-markdown>
+<script type="text/template">
+<!-- .slide: data-background="#fff" -->
+
+#Datartisan 数据工匠
+
+*数据时代，匠心独运*
+
+![logo](http://datartisan.com/img/logo.png)
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+## Markdown support
+
+Write content using inline or external Markdown.
+Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+# EMPTY
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+## 联系我们
+
+E-mail: info@datartisan.com
+
+http://datartisan.com/contact
+
+</script>
+</section>
+
+
+
 			</div>
 		</div>
 
@@ -36,13 +95,15 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+                transition: 'fade',
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true }
 				]
 			});
 		</script>
