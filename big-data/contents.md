@@ -20,6 +20,8 @@ summary:
 
 - 大数据现状
 
+公司名录：http://dfkoz.com/big-data-landscape/
+
   - 产业
   - 产品、实际应用
     
