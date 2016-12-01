@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Data Science Tools</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -20,12 +20,990 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+        
+        <style type="text/css">
+        .reveal {
+            font-size: 50px;
+        }
+        
+        .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: 'Source Sans Pro', 'Microsoft Yahei', Helvetica, sans-serif;
+            text-transform: none;
+            font-weight: normal;
+        }
+        
+        .reveal section img {
+            box-shadow: none;
+            border: none;
+        }
+        </style>
+        
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+            
+<section data-markdown>
+<script type="text/template">
+
+# 数据科学工具
+
+</script>
+</section>   
+            
+<section data-markdown >
+<script type="text/template">
+## g_will@ieqi.com
+</script>
+</section>
+
+<section data-markdown style="text-align: left;">
+<script type="text/template">
+
+# Outline
+
+- 数据科学工具的选择
+- “大数据”用起来
+- 其他一些有意思的东西
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+## 数据科学工具的选择
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 观点
+
+要告诉大家什么是好的，比较主观
+
+只说我推荐的，省去理客中
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 观点
+
+远离时间黑洞
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 观点
+
+有些坑已经绕不过去了，需要填起来
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 电脑
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- 大内存
+- 固态硬盘
+- 没有独显比较好
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+不差钱的同学，推荐选择 Macbook Pro
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+至于想玩深度学习的不差钱的同学
+
+还可以准备 NVIDIA 的顶级显卡若干
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+<img src="img/hedan.png"
+     style="margin-top: -5%;">
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 操作系统
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+想要在数据科学方面好好干他一票的同学
+
+Linux > macOS > Windows
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+### 推荐
+
+Ubuntu
+
+Ubuntu LTS 16.04
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 编程语言
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+Python
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- C/C++、Scala 不要碰，珍惜时间
+- R 不要当做编程语言来用，姿势错误
+- Julia，No Silver Bullet
+- PHP、JS 领域不同，无意义
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+Anaconda
+
+Anaconda ("Anaconda Distribution") is a free, easy-to-install package manager, environment manager, Python distribution, and collection of over 720 open source packages with free community support. 
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+![](img/anaconda.png)
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+
+集成环境，一步到位，省事
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 软件
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+Excel
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+R
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+把 R 当软件工具来学，像 Excel 那样
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 工作环境
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+Jupyter
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+<img src="img/jupyterpreview.png">
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+### Jupyter Notebook
+
+is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+上图，上网页
+
+machine-learning
+
+https://nbviewer.jupyter.org/gist/darribas/4121857
+
+https://nbviewer.jupyter.org/gist/fonnesbeck/2352771
+
+</script>
+</section>
+
+
+
+<section data-markdown >
+<script type="text/template">
+
+## 工作输出管理
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+### GitHub
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+- 沟通方式
+- 高效协作
+- 版本管理
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+https://github.com/
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+上网页
+
+https://github.com/cosname/translation/blame/master/Yubin-interview/Yubin-interview.md
+
+https://github.com/nborwankar/LearnDataScience/blob/master/notebooks/A1.%20Linear%20Regression%20-%20Overview.ipynb
+
+https://github.com/nborwankar/LearnDataScience/blob/master/notebooks/D3.%20K-Means%20Clustering%20Analysis.ipynb
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+# “大数据”用起来
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+什么是大数据？
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+单机无法有效处理
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+分布式
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+CAP 三角
+
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+- 一致性（Consistency)
+- 可用性（Availability）
+- 分区容错性（Partition tolerance）
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+分布式工具的意义在于隔离分布式问题
+
+通用化
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- Google 
+- Hadoop
+- 10年发展
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+Spark
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+情况：非常易用
+
+从IT研发角度看
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+问题：是否合适？
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+琐碎的事情：
+
+- 机子？
+- 计算机服务器运维知识？
+- 数据流能接上去吗？
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+Hadoop 生态体系已经包括上百个软件项目
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+Hadoop 一般指 HDFS
+
+分布式文件系统
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+步骤：
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+- 首先有若干台电脑（普通的退役的 pc 机即可）
+- 组成一个局域网（交换机要好一点）
+- 都装 ubuntu-server 系统（LTS 16.04）
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- 做必要的配置
+  - 修改软件源的地址，修改到厦大镜像地址
+  - 更新系统软件
+  - 配置用户 ssh 访问秘钥，可以相互直接访问
+- 都装 jdk， OpenJDK 1.8 就好，
+
+      sudo apt update
+      sudo apt install openjdk-8-jdk  
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+- 下载最新的 spark 编译好的包
+  - 复制到各个机子
+  - 解压缩
+  - 简单配置，使用 standalone 集群模式
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+- 启动 master
+      sudo ./sbin/start-master.sh
+- 启动各个节点
+      sudo ./sbin/start-slave.sh <master-spark-URL>
+- 开始工作：启动一个 python-shell  开始工作
+      ./bin/pyspark --master <master-spark-URL>
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+- 可选：搭建 hadoop hdfs ，提供超大文件的读写
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+<img src="img/spark-notebook.png">
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+## Spark
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+- 依然是 MapReduce 模式
+- 利用内存、DAG提高计算效率
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- 只把 spark 当做计算工具
+- 不要研究 spark 本身，另外一个领域
+- 各个语言接口
+  - 只是提供在这种语言下的操作 spark 的便利
+  - 并不是把 spark 和某种语言结合在一起
+  - 所以如果混用，效果更差
+  - pyspark，sparkr 都是
+  
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+## 主要组件
+
+- SparkSQL
+- Streaming
+- MLlib
+- GraphX
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## RDD
+
+Resilient Distributed Datasets
+
+Spark 中最核心的构件
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## RDD 是什么
+
+- 对于分布式存储数据的一种抽象
+- 可以在集群中传播的一组不可变对象
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+正是 RDD 抽象让 Spark 有了分布式的能力
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+Spark 的计算模式就是通过对<br>各种 RDD 的操作抽象构建而成的
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## RDD 操作
+
+- transformations 转换
+- actions 计算
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 转换 transformations 
+
+可以创造出新 RDD 的惰性操作，即不需要立即得到结果，在需要结果时再进行计算求值
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 计算 actions 
+
+发起计算并获得结果用来继续计算或者存储到硬盘
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+![](img/rdd-operation.png)
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+![](img/rdd-flow.png)
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+## 计算流程
+
+- Action 触发作业提交
+- RDD 之间的依赖分析形成 DAG
+- DAG 分为多个 Stage
+- 分发计算任务到各个节点
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+### 重要的是 SparkSQL
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+核心：DataFrame 思维
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+构建环境
+
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession \
+    .builder \
+    .appName("Python Spark SQL") \
+    .getOrCreate()
+```
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+读取数据
+
+```python
+df = spark.read.csv('ages.csv')
+```
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+丰富的数据操作
+
+```python
+# Select people older than 21
+df.filter(df['age'] > 21).show()
+# +---+----+
+# |age|name|
+# +---+----+
+# | 30|Andy|
+# +---+----+
+```
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+丰富的数据操作
+
+```python
+# Count people by age
+df.groupBy("age").count().show()
+# +----+-----+
+# | age|count|
+# +----+-----+
+# |  19|    1|
+# |null|    1|
+# |  30|    1|
+# +----+-----+
+```
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+直接上 SQL
+
+```python
+df.createOrReplaceTempView("people")
+sqlDF = spark.sql("SELECT * FROM people")
+sqlDF.show()
+# +----+-------+
+# | age|   name|
+# +----+-------+
+# |null|Michael|
+# |  30|   Andy|
+# |  19| Justin|
+# +----+-------+
+```
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+保存数据
+
+```python
+df.select("name", "age").write\
+  .save("namesAndAges.csv", format="csv")
+```
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+## MLlib
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+### 算法库
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- 特征处理
+- 模型算法
+- 评估调优
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+其他分布式工具和方案
+
+- 现成的
+  - 国内 qingcloud
+  - 国外 AWS
+
+  问题：费时间、费钱
+  
+- 不现成的
+  - NoSQL库、MPP数据库
+  
+  问题：太麻烦，不好处理
+  
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+<img style="width: 200%;" src="img/data-upload.png">
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+## 核心问题还是在于如何组织数据流
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+## 成本问题
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+- 掌握相关计算机技术
+- 不走寻常路
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+# 其他需要提及的事情
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 要有工程意识
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- 娱乐/工作环境分离
+- 开发环境管理，软件版本清晰
+- 虚拟机快照、备份
+- 代码数据版本管理
+- 注释！！！
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 深度学习框架
+
+- TensorFlow
+- MXNet
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## JupyterLab
+
+the next generation of the Jupyter Notebook
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+<img src="img/jlab-screenshot-nb-con-term-2.png">
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+<img src="img/jupyter-plugins-demo.gif">
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 容器化
+
+## Docker
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+大幅简化以上所有的步骤
+
+但是问题依旧，需要投入时间了解
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 不能不强调的 DataFrame
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+- 表
+- 统计表格
+- Table
+- 关系数据库表，SQL
+- R、Pandas
+- 算子
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+数据处理的脉络
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 图挖掘
+
+Graph Mining
+
+- GraphX
+- GraphFrame
+
+</script>
+</section>
+
+<section style="text-align: left;" data-markdown>
+<script type="text/template">
+
+# THE END
+
+感谢大家的聆听
+
+</script>
+</section>
+
+<section style="text-align: left;" data-markdown>
+<script type="text/template">
+
+# Q & A
+
+</script>
+</section>
+
+
 			</div>
 		</div>
 
@@ -36,6 +1014,7 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+                slideNumber: true,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
