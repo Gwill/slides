@@ -20,37 +20,37 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-        
+
         <style type="text/css">
         .reveal {
             font-size: 50px;
         }
-        
+
         .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
             font-family: 'Source Sans Pro', 'Microsoft Yahei', Helvetica, sans-serif;
             text-transform: none;
             font-weight: normal;
         }
-        
+
         .reveal section img {
             box-shadow: none;
             border: none;
         }
         </style>
-        
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-            
+
 <section data-markdown>
 <script type="text/template">
 
 # 数据科学工具
 
 </script>
-</section>   
-            
+</section>
+
 <section data-markdown >
 <script type="text/template">
 ## g_will@ieqi.com
@@ -74,6 +74,14 @@
 <script type="text/template">
 
 ## 数据科学工具的选择
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+<img style="width: 120%" src="img/data-scientist.png">
 
 </script>
 </section>
@@ -196,7 +204,7 @@ Ubuntu LTS 16.04
 <section data-markdown >
 <script type="text/template">
 
-Python
+# Python
 
 </script>
 </section>
@@ -217,7 +225,7 @@ Python
 
 Anaconda
 
-Anaconda ("Anaconda Distribution") is a free, easy-to-install package manager, environment manager, Python distribution, and collection of over 720 open source packages with free community support. 
+Anaconda ("Anaconda Distribution") is a free, easy-to-install package manager, environment manager, Python distribution, and collection of over 720 open source packages with free community support.
 
 </script>
 </section>
@@ -249,7 +257,7 @@ Anaconda ("Anaconda Distribution") is a free, easy-to-install package manager, e
 <section data-markdown >
 <script type="text/template">
 
-Excel
+## Excel
 
 </script>
 </section>
@@ -257,7 +265,7 @@ Excel
 <section data-markdown >
 <script type="text/template">
 
-R
+## R
 
 </script>
 </section>
@@ -266,7 +274,7 @@ R
 <section data-markdown >
 <script type="text/template">
 
-把 R 当软件工具来学，像 Excel 那样
+把 R 当软件工具来用，像 Excel 那样
 
 </script>
 </section>
@@ -282,7 +290,7 @@ R
 <section data-markdown >
 <script type="text/template">
 
-Jupyter
+## Jupyter
 
 </script>
 </section>
@@ -438,7 +446,7 @@ CAP 三角
 <section data-markdown >
 <script type="text/template">
 
-- Google 
+- Google
 - Hadoop
 - 10年发展
 
@@ -530,7 +538,7 @@ Hadoop 一般指 HDFS
 - 都装 jdk， OpenJDK 1.8 就好，
 
       sudo apt update
-      sudo apt install openjdk-8-jdk  
+      sudo apt install openjdk-8-jdk
 </script>
 </section>
 
@@ -591,7 +599,7 @@ Hadoop 一般指 HDFS
   - 并不是把 spark 和某种语言结合在一起
   - 所以如果混用，效果更差
   - pyspark，sparkr 都是
-  
+
 </script>
 </section>
 
@@ -651,7 +659,7 @@ Spark 的计算模式就是通过对<br>各种 RDD 的操作抽象构建而成�
 
 <section data-markdown>
 <script type="text/template">
-## 转换 transformations 
+## 转换 transformations
 
 可以创造出新 RDD 的惰性操作，即不需要立即得到结果，在需要结果时再进行计算求值
 </script>
@@ -659,7 +667,7 @@ Spark 的计算模式就是通过对<br>各种 RDD 的操作抽象构建而成�
 
 <section data-markdown>
 <script type="text/template">
-## 计算 actions 
+## 计算 actions
 
 发起计算并获得结果用来继续计算或者存储到硬盘
 </script>
@@ -827,12 +835,12 @@ df.select("name", "age").write\
   - 国外 AWS
 
   问题：费时间、费钱
-  
+
 - 不现成的
   - NoSQL库、MPP数据库
-  
+
   问题：太麻烦，不好处理
-  
+
 </script>
 </section>
 
