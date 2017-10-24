@@ -1,0 +1,1477 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Introduction to Data Science</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        <style type="text/css">
+            .reveal {
+                font-size: 46px;
+            }
+
+            .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+                font-family: 'FZLTHJW--GB1-0', 'Source Sans Pro', 'Microsoft Yahei', Helvetica, sans-serif;
+                text-transform: none;
+                font-weight: normal;
+            }
+
+            .reveal section img {
+                box-shadow: none;
+                border: none;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+## 数据、数据思维与数据科学
+
+<img src="img/mba-logo.png">
+
+</script>
+</section>
+
+<!-- 
+<section data-markdown>
+<script type="text/template">
+# 聊聊“大数据”
+</script>
+</section>
+-->
+
+<section data-markdown >
+<script type="text/template">
+## 郭鹏
+
+### FRM
+
+### guopeng@datartisan.com
+</script>
+</section>
+
+<section data-markdown style="text-align: left;">
+<script type="text/template">
+
+## 内容
+
+- 数据？
+- 大数据
+- 数据思维？
+- 数据科学
+- 从务实层面看“大数据”的来龙去脉
+- “数据”行业的现状与发展趋势
+- 介绍一些实际的“数据”工作
+
+</script>
+</section>
+
+<section data-markdown style="text-align: left;">
+<script type="text/template">
+
+## Tips
+
+- 简化只是为了更方便的介绍
+- 切勿认为 简化 = 简单
+- 事实问题的复杂性是客观存在的
+- 快速掌握一门知识体系的方法：核心概念、核心概念的类比、核心概念的联系
+- 人的认知方式：归纳、联想
+- 没有严密的推导论证
+- 更多是自己的观察和主观体会
+- 受限于个人定位以及工作局限会有很多盲点
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+## 来龙去脉
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## “大数据”的两个方面
+
+- 社会、文化意义上的
+- 应用、技术意义上的
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 生活都被数据化信息化
+
+- 意识形态
+- 生活方式
+- 人的定义
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+<img src="img/meiya.png">
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 斯诺登披露棱镜计划
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+NSA可以在PRISM计划中获得公民的数据
+
+Email、语音/视频电话、照片、社交网络等
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## FICO
+
+## 750分
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+## 什么是应用层面？
+
+真正与实际生活（商业活动）互动
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+### 应用、技术、计算机、信息技术
+
+与计算机、互联网有关
+
+是整个社会变革的体现
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+## 为什么要从这个角度去梳理？
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 更有现实意义
+
+更能指导我们的实际工作
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+## 技术层面的“大数据”？
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 大数据从哪来
+
+- 社交网络
+- 电子商务
+- 移动设备
+- 云计算
+- 可穿戴设备
+- 生物医药
+- ...
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 量变到质变
+
+移动互联网的流量预计
+
+在 2016 年达到 11 EB 每月
+
+到了 2020 年接入互联网的设备将达 230 亿部
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 问题
+
+数据规模以及分析流程都超越了我们以往<br>
+存储、处理、分析、理解的范畴
+
+</script>
+</section>
+
+
+<section data-markdown >
+<script type="text/template">
+
+单机无法有效处理
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+## 如何理解单机
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+### 无法脱离现代计算机的本质
+
+所以为什么强调应用、技术
+
+问题的本源
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+## 如何理解单机
+
+一台计算机
+
+冯诺依曼结构
+
+cpu 内存 I/O
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+### 瓶颈在于内存
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 多大才算大？
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 扩容
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+### 思路一：Scale Up
+
+提高单机的能力
+
+提升硬件水平
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+- 加内存、换固态
+- 摩尔定律
+- 超级计算机
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+核心问题：天花板太低，成本太高
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+- 思路二： Scale Out
+
+多个机子协同处理，横向扩容
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 分布式的问题
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 通信的问题
+
+通信失效
+
+是没有任何回应是最坏的情况
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+拜占庭将军问题
+
+> 军队与军队之间很远，传讯兵可能在途中阵亡，或因太远不能在得到消息立即回复，发送方也无法确认消息丢失与否，导致决策不能达到一致性
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+Scale Up 要比 Scale Out 贵
+
+边际成本递增
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+Scale Out 要比 Scale Up 难
+
+分布式容错、软件架构问题
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+迎难而上
+
+产业界选择了 Scale Out
+
+</script>
+</section>
+
+
+
+<section data-markdown>
+<script type="text/template">
+
+### 重点
+
+工业化、商业化、实用化
+
+投入产出
+
+成本
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 产业界
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## Google
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 三大论文
+
+- GFS
+- MapReduce
+- BigTable
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## Hadoop
+
+开始对三大论文进行开源实现
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+分布式软件的核心意义在于隔离分布式问题
+
+Note:
+
+通用化
+
+- 现在我们应用到的这些分布式系统，帮助我们主要解决的不是分布式问题，主要解决的是：如何让终端用户不需要考虑分布式问题。用户只要专注于数据处理本身，至于存储、计算怎么分布，这是这些系统应该解决的，大家不需要再去关注（分而治之的思想）
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+降低使用者的心智负担
+
+降低生产成本
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+开源社区化的软件协作开发方式
+
+是“大数据”技术最大的推动力
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+经过十年的发展造就了
+
+一个庞大的软件生态体系
+
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+
+<img src="img/hadoop-eco.png">
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+当然并不是都在 Hadoop 体系内
+
+但是，都受到了影响，互有关联
+
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img src="img/BigDataSoftwares.png">
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### 涉及到数据处理的方方面面
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+<img src="img/hadoop-flow.png">
+
+</script>
+</section>
+
+
+
+<section data-markdown>
+<script type="text/template">
+
+### 总结
+
+利用分布式、集群化的思路应对“大数据”
+
+应用层面的“大数据”
+
+就是指利用分布式大数据工具
+
+来进行数据处理、数据分析
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 时髦术语
+
+### Buzzwords
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+- 云计算
+- 大数据
+- 物联网
+- 工业4.0
+- 人工智能
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+### 亦喜亦忧
+
+- 概念异化
+- 加速沉淀
+- 知识外溢
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## “数据”行业的现状<br>与发展趋势
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 数据科学
+
+Data Science
+
+</script>
+</section>
+
+<section data-markdown >
+<script type="text/template">
+
+![](img/data-science.png)
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+我觉得“数据科学”更能描述“数据”行业
+
+并非因为“科学”高大上
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 科学，强调实证
+
+务实，要解决实际问题
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 也正是我们数模课程的宗旨
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 问题
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+
+<img src="img/questions.png">
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 数据行业细分
+</script>
+</section>
+
+<section data-markdown  data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/Big-Data-Landscape-2016-v18-FINAL.png">
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+- 基础设施：软、硬、云
+- 分析、咨询、方法
+- 应用、垂直、专业
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+## 国内情况
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+- 受限于商业、产业环境影响
+  - 毕竟整个工商业的成熟度远逊于西方
+  - 数据化运营是一个更高层级的需求
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+能制作一台发动机和能生产发动机不是一回事
+
+能做数据分析和能把“数据”理念运用在<br>生产经营中也不是一回事
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+- 服务化的商业模式很难运作
+- 往往需要有强力的背景和人脉
+- 与其分工，不如自己来做，BAT
+- BDA，Boss Driven Analysis
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## Palantir
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+“大数据”领域的标杆
+
+全球未上市公司市值排名前三
+
+（Uber、小米、Palantir 数据或有滞后）
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+- 但是，是个特例：
+  - 不是传统意义的数据分析，和 BI 、量化数据分析这条线索离的很远
+  - 更偏向于知识图谱
+  - 客户是美国政府单位 CIA、FBI
+  - 协助发现本拉登藏身之处
+
+- 对标中国情况，没有参考意义
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+Peter Thiel
+
+<img style="width: 30%" src="img/PeterThiel.jpg">
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 发展趋势
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 工具、技术
+
+更大、更快、更强
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 如何从数据到决策
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 领域
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+### 数据可视化
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+
+上例子
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+- 平均寿命
+- 人均收入
+- 国家
+- 人口
+- 所属大洲
+- 时间变迁
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+数据可视化从描述性统计发展而来
+
+核心问题是：如何提高信息的传递效率
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+#### AI
+#### 机器学习
+#### 深度学习
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### AlphaGo
+
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img src="img/what-is-ml.png">
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+$$ y = f(x|X_R,Y_R,E) $$
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+对于 AI 不切实际的想象：
+
+AI 奇点，替代人类
+
+现在还看不到这个趋势
+
+为什么会有这样的看法？
+
+脱离了 AI 产生的技术背景，望文生义
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+可以用来做
+
+- 识别
+- 创造
+- 判断
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+### 案例
+
+Neural Style
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+<img src="img/starry_night.jpg">
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+<img src="img/hoovertowernight.jpg">
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+<img src="img/starry_stanford_big_2.png">
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 图数据分析
+
+Graph Mining
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+提供更有力的洞察工具
+
+超越传统数值数据的分析一条可能的路劲
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 现状
+
+学术界、开源软件界准备了大量的“弹药”
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 现状
+
+沉默成本的担忧
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 路径
+
+需要找到合适的应用场景
+
+要解决具体的问题
+
+切勿拿着锤子找钉子
+
+更不是灵丹妙药
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+在未来，
+
+数据部门就如同今天的财务部门一样，
+
+会成为合格企业的标准配置
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+但是，也和现在的财务部门一样，
+
+不是企业核心业务
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### 锦上添花
+### 而非雪中送炭
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 我所参与的工作
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 案例
+
+- 航线、航航班收益数据可视化
+- 超市数据化运营平台
+- 自动行业简报生成
+- 自来水管线漏水监测
+- 电商顾客潜在需求发现
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 航线、航航班收益数据可视化
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+问题
+
+如何快速发现高价值航班以指导运力分配？
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+解决方案：数据可视化
+
+- 提高信息传递效率
+- 提高信息密度，以便专业人员高效洞察
+
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/cases/变量与总收入相关图.png">
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/cases/热力图1.png">
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/cases/聚类2.png">
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/cases/聚类3.png">
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/cases/航班运力-日期-收益关系.png">
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 超市数据化运营平台
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+问题：如何洞悉超市运营情况？
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+数据化运营如何开展？
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+彼得德鲁克曾说
+
+一件事如何无法衡量它，那么就无法改进它
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+数据化运营的出发点一样
+
+一个业务如果无法有效的量化，就无法改进
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+自上而下
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+解决方案
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+超市业务指标量化
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+基础
+
+- 销售额
+- 综合毛利额/率
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+运营
+
+- 库存周转
+- 畅销缺货率
+- 供货商履约率
+- 坪效、人效
+- 达成率
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+高效的数据统计
+
+数据可视化
+</script>
+</section>
+
+<section data-background-image="img/cases/mdap-1.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+<section data-background-image="img/cases/mdap-2.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+<section data-background-image="img/cases/mdap-3.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+<section data-background-image="img/cases/mdap-4.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+<section data-background-image="img/cases/mdap-5.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+<section data-background-image="img/cases/mdap-6.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+有了量化数据怎么用？
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+对比
+- 纵向，时间
+- 横向，跨维度，不同业务部门，不同部类
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+拆解
+- 品类
+- 部门
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 自动行业简报生成
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+问题
+
+如何减少业务人员重复性的劳动？
+
+如何快速获取行业信息？
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+观点
+
+机器做好机器应该做的事情
+
+人做好人应该做的事情
+
+Palantir
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+解决方法：
+
+- 数据抓取
+- 自然语言处理
+- 机器学习方法
+- 行业信息摘要自动化生成
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/cases/auto-generate-reprot.png">
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 自来水管线漏水监测
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+问题：
+
+如何自动判断是否漏水
+
+非行业专家如何快有效问题
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+背景
+- IoT 设备，维护成本极低
+- 每天若干条声音信号数据，无线回传
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+解决方案：
+
+- 利用机器学习中的有监督算法
+- 迭代构建集成分类器
+- 与线上系统集成，提高效率
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+观点
+
+- 我们强调领域知识的重要性，但是数据科学（统计学习、机器学习）恰恰可以让我们降低对于领域知识的依赖
+- 培养行业专家是非常困难的，但是复制有效的机器学习方案是有章可循的，AlphaGo 的胜利正印证了这一观点
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+看系统
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 电商顾客潜在需求发现
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+问题
+
+如何发现用户的潜在需求？
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+延伸
+
+如何指导决策？
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+理论、数据不要给我讲了
+
+就告诉我该怎么办吧
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+解决方案
+
+- 自然语言处理
+- 无监督学习，发现关键信息
+- 分析师介入
+</script>
+</section>
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%" src="img/cases/kindle.png">
+</script>
+</section>
+
+<section data-background-image="img/cases/kindle-topic.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+<section data-background-image="img/cases/k-1.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+<section data-background-image="img/cases/k-2.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+<section data-background-image="img/cases/k-3.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+<section data-background-image="img/cases/k-4.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+
+
+<section data-markdown data-background="#fff">
+<script type="text/template">
+<img style="margin-top: -5%;width: 42%" src="img/cases/盒子.jpg">
+<img style="margin-top: -5%;width: 42%" src="img/cases/盒子2.jpg">
+</script>
+</section>
+
+<section data-background-image="img/cases/o-1.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+<section data-background-image="img/cases/o-2.png"
+         data-background-size="contain">
+</section>
+
+<section data-background-image="img/cases/o-3.png"
+         data-background-size="contain">
+</section>
+
+<section data-background-image="img/cases/o-4.png"
+         data-background-size="contain"
+         data-background-color="#fff">
+</section>
+
+<section data-markdown style="text-align: left;">
+<script type="text/template">
+# THE END
+
+感谢大家的聆听
+
+</script>
+</section>
+
+<section data-markdown style="text-align: left;" >
+<script type="text/template">
+
+# Q & A
+
+</script>
+</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+                slideNumber: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    // MathJax
+                    { src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
