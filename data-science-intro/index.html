@@ -1,19 +1,19 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>Introduction to Data Science</title>
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Introduction to Data Science</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
         <style type="text/css">
             .reveal {
                 font-size: 46px;
@@ -30,21 +30,21 @@
                 border: none;
             }
         </style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
 
 <section data-markdown data-background="#fff">
 <script type="text/template">
-## 数据、数据思维与数据科学
+## 数据、大数据与数据科学
 
 <img src="img/mba-logo.png">
 
 </script>
 </section>
 
-<!-- 
+<!--
 <section data-markdown>
 <script type="text/template">
 # 聊聊“大数据”
@@ -56,9 +56,13 @@
 <script type="text/template">
 ## 郭鹏
 
+## 2016级 MBA
+
 ### FRM
 
 ### guopeng@datartisan.com
+
+## 2014 年开始做 Datartisan 数据工匠
 </script>
 </section>
 
@@ -67,13 +71,17 @@
 
 ## 内容
 
+- 数据时代与大数据
+- “数据”行业的现状与发展趋势
+- 介绍一些实际的“数据”工作
+
 - 数据？
 - 大数据
 - 数据思维？
-- 数据科学
+- 数据科学？
 - 从务实层面看“大数据”的来龙去脉
-- “数据”行业的现状与发展趋势
-- 介绍一些实际的“数据”工作
+
+
 
 </script>
 </section>
@@ -83,12 +91,21 @@
 
 ## Tips
 
-- 简化只是为了更方便的介绍
-- 切勿认为 简化 = 简单
-- 事实问题的复杂性是客观存在的
-- 快速掌握一门知识体系的方法：核心概念、核心概念的类比、核心概念的联系
+- 概念：
+  - 对于一个知识体系的了解提现在对于这个体系内核心概念的理解
+  - 快速掌握一门知识体系的方法：核心概念、核心概念的类比、核心概念的联系
+
+- 复杂性
+
+    - 简化只是为了更方便的介绍
+    - 切勿认为 简化 = 简单
+    - 事实问题的复杂性是客观存在的
+
 - 人的认知方式：归纳、联想
-- 没有严密的推导论证
+
+
+- 没有严密的推导论证，知识点并不完备
+- 简单的类比与演绎，并不代表实际的简单，这只是为了沟通将客观复杂的主观简化，
 - 更多是自己的观察和主观体会
 - 受限于个人定位以及工作局限会有很多盲点
 
@@ -108,6 +125,19 @@
 
 - 社会、文化意义上的
 - 应用、技术意义上的
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+信息化浪潮
+
+第三次工业革命
+
+- 通用计算机大规模使用
+- 互联网的普及
 
 </script>
 </section>
@@ -150,9 +180,21 @@ Email、语音/视频电话、照片、社交网络等
 
 <section data-markdown>
 <script type="text/template">
-## FICO
 
-## 750分
+## 芝麻信用
+
+350 ~ 950
+
+### FICO
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+<video data-autoplay src="videos/face++.mp4"></video>
+
 </script>
 </section>
 
@@ -1450,28 +1492,28 @@ Palantir
 </script>
 </section>
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
                 slideNumber: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
                     { src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     // MathJax
                     { src: 'plugin/math/math.js', async: true }
-				]
-			});
-		</script>
-	</body>
+                ]
+            });
+        </script>
+    </body>
 </html>
